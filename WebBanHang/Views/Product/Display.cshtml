@@ -1,0 +1,26 @@
+﻿@model WebBanHang.Models.Product
+
+<h2>@Model.Name</h2>
+
+@* <div>
+    <h3>Price: @Model.Price</h3>
+    <p>@Model.Description</p>
+    @if (!string.IsNullOrEmpty(Model.ImageUrl))
+    {
+        <img src="@Model.ImageUrl" alt="Product Image" style="max-width: 200px;" />
+    }
+</div> *@
+
+<a asp-action="Index" class="btn btn-primary">Back to List</a>
+
+<div class="col">
+    <div class="card h-100">
+        <img src=@Model.ImageUrl style="height:250px; object-fit:cover;" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@Model.Name</h5>
+            <p class="card-text">@Model.Description</p>
+            <p class="card-text">@Model.Price</p>
+            <a asp-action="Index" class="btn btn-primary">Back to List</a>
+        </div>
+    </div>
+</div>
